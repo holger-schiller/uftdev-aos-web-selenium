@@ -2,6 +2,7 @@ package net.mf;
 
 import java.awt.image.RenderedImage;
 import java.net.URI;
+import java.time.Duration;
 import java.util.regex.Pattern;
 
 import org.junit.After;
@@ -32,7 +33,8 @@ public class SeleniumTest  {
 	
     // This script was created against AOS 1.1.3.  Since it uses Xpath, you may need to update the script
     // if using against a different version.
-    private static final String ADV_WEBSITE  = "http://nimbusserver.aos.com:8000/#/";
+	private static final String ADV_WEBSITE  = "http://sac-hvm03325.swinfra.net:8000/#/";
+    //private static final String ADV_WEBSITE  = "http://nimbusserver.aos.com:8000/#/";
     //private static final String ADV_WEBSITE  = "http://www.advantageonlineshopping.com";
 
     //You will need to have an account created in AOS and will need to supply the credentials
@@ -91,7 +93,7 @@ public class SeleniumTest  {
         Reporter.reportEvent("Open Website", "Opening website: "+ADV_WEBSITE);
 
         //driver.manage().window().maximize();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         //Login to Advantage
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/header/nav/ul/li[3]/a/a")));
