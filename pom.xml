@@ -10,7 +10,7 @@
 
     <properties>
         <junit.ver>4.13.2</junit.ver>
-        <se.ver>4.28.1</se.ver>
+        <se.ver>4.23.1</se.ver>
         <webdrivermanager.ver>5.9.2</webdrivermanager.ver>
         <slf4j.ver>2.0.16</slf4j.ver>
         <leanft.version>RELEASE</leanft.version>
